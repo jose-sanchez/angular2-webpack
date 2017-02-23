@@ -1,32 +1,29 @@
-import { NgModule, ApplicationRef } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
 
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ApiService } from './shared';
-import { routing } from './app.routing';
-
+import { NgModule ,ApplicationRef}       from '@angular/core';
+import { BrowserModule }  from '@angular/platform-browser';
+import { FormsModule }    from '@angular/forms';
+import { AppComponent }         from './app.component';
+import { ProfileInfo }      from './profileInfo/profileInfo.component';
+import { GymComponent }      from './gym/gym.component';
+import { ExerciseListComponent }      from './exerciseList/exercise-List.component';
+import { ExerciseDashboardComponent }      from './exerciseDashboard/exercise-dashboard.component';
+import { AppRoutingModule }     from './app-routing.module';
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
-
 @NgModule({
   imports: [
     BrowserModule,
-    HttpModule,
     FormsModule,
-    routing
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,
-    HomeComponent,
-    AboutComponent
+    GymComponent,
+    ExerciseListComponent,
+    ProfileInfo,
+    ExerciseDashboardComponent
   ],
-  providers: [
-    ApiService
-  ],
-  bootstrap: [AppComponent]
+
+  bootstrap: [ AppComponent ]
 })
 export class AppModule {
   constructor(public appRef: ApplicationRef) {}

@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-4">
+            <profile-Info>Loading profile info component content here ...</profile-Info>
+        </div>
+         <div class="col-xs-8">
+             <div class="row">
+             <exercise-List (onExerciseSelected)="onExerciseSelected($event)" >Loading exercise-List component content here ...</exercise-List>
+            </div>
+             <div class="row">
+                  evolucion de tus ejercicios {{exercise}}
+                 <exercise-dashboard [exercise]="exercise" >
+                 evolucion de tus ejercicios 
+                 </exercise-dashboard>
+            </div>  
+        </div>
+    </div>
+</div> 

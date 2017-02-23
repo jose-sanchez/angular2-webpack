@@ -1,0 +1,7 @@
+<div class="exerciseList">
+    <div class="list-group">
+       <a *ngFor="let exercise of exercises" (click)="onSelect(exercise)" class="list-group-item">
+           <span class="glyphicon glyphicon-plus"></span> {{exercise.name}} <span class="badge">Exersice</span>
+       </a>
+</div>
+</div>
